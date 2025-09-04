@@ -1,0 +1,242 @@
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.7;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+h1:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #3498db;
+  border-radius: 3px;
+}
+
+.container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* 搜索框样式 */
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 600px;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-box input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.search-box button {
+  padding: 14px 28px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+.search-box button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* 结果容器 */
+#resultContainer {
+  text-align: left;
+  min-height: 200px;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 详情样式 */
+.details {
+  margin-top: 15px;
+}
+
+.detail-item {
+  margin-bottom: 12px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: #2980b9;
+  min-width: 120px;
+  display: inline-block;
+}
+
+/* 分区块样式 */
+.section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+}
+
+.section h3:before {
+  content: "•";
+  color: #3498db;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* 植物列表样式 */
+.plant-list {
+  line-height: 1.8;
+}
+
+/* 建议列表样式 */
+.suggestions {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.suggestions li {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestions li:hover {
+  background-color: #f0f7ff;
+  color: #3498db;
+  padding-left: 20px;
+}
+
+/* 加载状态 */
+.loading {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(52, 152, 219, 0.2);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 错误提示 */
+.error {
+  color: #e74c3c;
+  background-color: #fef5f5;
+  border: 1px solid #ffe3e3;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .detail-item strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .search-box button {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+}

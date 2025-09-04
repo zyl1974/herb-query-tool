@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>藏羌彝药材智能查询系统</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>藏羌彝药材智能查询系统</h1>
+    <p>支持：药材详情、民族功效、药材对比、病症匹配</p>
+
+    <!-- 搜索输入区 -->
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="queryInput" 
+        placeholder="请输入查询（如：羌活、羌活 vs 当归、治疗感冒的药材）"
+      />
+      <button id="searchBtn">查询</button>
+    </div>
+
+    <!-- 结果展示区 -->
+    <div id="resultContainer"></div>
+  </div>
+
+  <!-- 数据与交互逻辑 -->
+  <script src="script.js"></script>
+</body>
+</html>
